@@ -1,0 +1,72 @@
+program cajeroAutomatico;
+var
+    clave, opcion: integer;
+    saldo, monto: real;
+    otraOp, verResumen: char;
+    clave_correcta: boolean;
+begin
+    saldo := 1000;
+    clave_correcta := false;
+    
+    write('Ingrese su clave: ');
+    readln(clave);
+    
+    if clave = 1234 then // Clave predefinida como ejemplo
+        clave_correcta := true;
+    
+    if clave_correcta then
+    begin
+        repeat
+            writeln('1. Extraer dinero');
+            writeln('2. Depositar dinero');
+            writeln('3. Transferir dinero');
+            writeln('4. Consultar saldo');
+            write('Seleccione una opcion: ');
+            readln(opcion);
+            
+            case opcion of
+                1: begin
+                    write('Ingrese monto a extraer: ');
+                    readln(monto);
+                    if monto <= saldo then
+                    begin
+                        saldo := saldo - monto;
+                        writeln('Extraccion realizada.');
+                    end
+                    else
+                        writeln('Saldo insuficiente.');
+                end;
+                2: begin
+                    write('Ingrese monto a depositar: ');
+                    readln(monto);
+                    saldo := saldo + monto;
+                    writeln('Deposito realizado.');
+                end;
+                3: begin
+                    write('Ingrese monto a transferir: ');
+                    readln(monto);
+                    if monto <= saldo then
+                    begin
+                        saldo := saldo - monto;
+                        writeln('Transferencia realizada.');
+                    end
+                    else
+                        writeln('Saldo insuficiente.');
+                end;
+                4: writeln('Saldo actual: S/.', saldo:0:2);
+            else
+                writeln('Opcion no valida');
+            end;
+            
+            write('¿Desea ver el resumen de la operacion? (S/N): ');
+            readln(ver_resumen);
+            if (ver_resumen = 'S') or (ver_resumen = 's') then
+                writeln('Saldo actual: S/.', saldo:0:2);
+                
+            write('¿Desea realizar otra operacion? (S/N): ');
+            readln(otra_operacion);
+        until (otra_operacion = 'N') or (otra_operacion = 'n');
+    end
+    else
+        writeln('Clave incorrecta');
+end.

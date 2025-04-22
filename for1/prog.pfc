@@ -1,0 +1,10 @@
+program for1;
+var
+	num, i:integer;
+begin
+	write('Ingrese un numero:');
+	readln(num);
+	for i:=1 to num do
+		write(i,' ');
+		readln
+end.

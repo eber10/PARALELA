@@ -1,0 +1,9 @@
+program for2;
+var
+	tabla, num:integer;
+begin
+	for tabla:=1 to 5 do
+		for num:=1 to 10 do
+			writeln(tabla, ' por ', num,' es ', tabla*num);
+	readln
+end.

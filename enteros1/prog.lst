@@ -1,0 +1,49 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program Enteros1;
+    2     0 var 
+    3     0  edad:integer;
+    4     0  meses:integer;
+    5     0 begin
+    6     0  write('dime tu edad:');
+    7     2  readln(edad);
+    8     5  meses:=edad*12;
+    9    10  writeln('aproximadamente tienes', meses,'meses');
+   10    17 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 edad         46     variable    integer         0      True    1    5    0
+ 48 meses        47     variable    integer         0      True    1    6    0
+
+Generated P-code
+
+    0     ldcon.i      0        13          ;6
+    1     wrstr        0         0          ;6
+    2     ldadr        1         5          ;7
+    3     rdinp.i      0         0          ;7
+    4     rdlin        0         0          ;7
+    5     ldadr        1         6          ;7
+    6     ldval.i      1         5          ;8
+    7     ldcon.i      0        12          ;8
+    8     mulop.i      0         0          ;8
+    9     store.i      0         0          ;8
+   10     ldcon.i      0        22          ;9
+   11     wrstr        0        13          ;9
+   12     ldval.i      1         6          ;9
+   13     wrval.i      0         0          ;9
+   14     ldcon.i      0         5          ;9
+   15     wrstr        0        35          ;9
+   16     wrlin        0         0          ;9
+   17     stopx        0         0          ;9

@@ -1,0 +1,47 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program for1;
+    2     0 var
+    3     0  num, i:integer;
+    4     0 begin
+    5     0  write('Ingrese un numero:');
+    6     2  readln(num);
+    7     5  for i:=1 to num do
+    8     9   write(i,' ');
+    9    14   readln
+   10    14 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 num          46     variable    integer         0      True    1    5    0
+ 48 i            47     variable    integer         0      True    1    6    0
+
+Generated P-code
+
+    0     ldcon.i      0        18          ;5
+    1     wrstr        0         0          ;5
+    2     ldadr        1         5          ;6
+    3     rdinp.i      0         0          ;6
+    4     rdlin        0         0          ;6
+    5     ldadr        1         6          ;6
+    6     ldcon.i      0         1          ;7
+    7     ldval.i      1         5          ;7
+    8     for1u.i      0        14          ;7
+    9     ldval.i      1         6          ;8
+   10     wrval.i      0         0          ;8
+   11     ldcon.c      0        32          ;8
+   12     wrval.c      0         0          ;8
+   13     for2u.i      0         9          ;8
+   14     rdlin        0         0          ;8
+   15     stopx        0         0          ;9

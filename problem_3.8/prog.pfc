@@ -1,0 +1,11 @@
+program ordenDecreciente;
+var
+    a, b, c: integer;
+begin
+    write('Ingrese tres numeros separados por espacio: ');
+    readln(a, b, c);
+    if (a > b) and (b > c) then
+        writeln('Los numeros estan en orden decreciente')
+    else
+        writeln('Los numeros NO estan en orden decreciente');
+end.

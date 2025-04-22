@@ -1,0 +1,9 @@
+program coseno;
+var
+	pi, angulo, resultado:real;
+begin
+	pi:=3.1416;
+	angulo:=pi/4; (*45 grados=pi/4 radianes*)
+	resultado:=cos(angulo);
+	writeln('El coseno de 45 grados es:', resultado:4:3);
+end.

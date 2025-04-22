@@ -1,0 +1,11 @@
+program multiplos_de_7;
+var
+    i: integer;
+begin
+    writeln('Multiplos de 7 entre 1 y 100:');
+    for i := 1 to 100 do
+    begin
+        if i mod 7 = 0 then
+            write(i, ' ');
+    end;
+end.

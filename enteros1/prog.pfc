@@ -1,0 +1,10 @@
+program Enteros1;
+var 
+	edad:integer;
+	meses:integer;
+begin
+	write('dime tu edad:');
+	readln(edad);
+	meses:=edad*12;
+	writeln('aproximadamente tienes', meses,'meses');
+end.

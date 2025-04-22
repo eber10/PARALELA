@@ -1,0 +1,10 @@
+program Positivo;
+var
+	numero:integer;
+	esPositivo:boolean;
+begin
+	writeln('Escriba un numero');
+	readln(numero);
+	esPositivo:=numero>0;
+	if esPositivo then writeln('El numero es positivo');
+end.

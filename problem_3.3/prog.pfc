@@ -1,0 +1,21 @@
+program nombremes;
+var
+    mes: integer;
+begin
+    write('Ingrese un numero del 1 al 12: ');
+    readln(mes);
+    case mes of
+        1: writeln('Enero');
+        2: writeln('Febrero');
+        3: writeln('Marzo');
+        4: writeln('Abril');
+        5: writeln('Mayo');
+        6: writeln('Junio');
+        7: writeln('Julio');
+        8: writeln('Agosto');
+        9: writeln('Setiembre');
+        10: writeln('Octubre');
+        11: writeln('Noviembre');
+        12: writeln('Diciembre');
+    end;
+end.

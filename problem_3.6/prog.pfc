@@ -1,0 +1,15 @@
+program descuentotienda;
+var
+    importe, total: real;
+begin
+    write('Ingrese el importe total de la compra: S/.');
+    readln(importe);
+    if importe >= 150 then
+    begin
+        total := importe * 0.9;
+        writeln('Se aplico descuento del 10%');
+    end
+    else
+        total := importe;
+    writeln('Total a pagar: S/.', total:0:2);
+end.

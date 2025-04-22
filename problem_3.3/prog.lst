@@ -1,0 +1,122 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program nombremes;
+    2     0 var
+    3     0     mes: integer;
+    4     0 begin
+    5     0     write('Ingrese un numero del 1 al 12: ');
+    6     2     readln(mes);
+    7     5     case mes of
+    8     7         1: writeln('Enero');
+    9    11         2: writeln('Febrero');
+   10    15         3: writeln('Marzo');
+   11    19         4: writeln('Abril');
+   12    23         5: writeln('Mayo');
+   13    27         6: writeln('Junio');
+   14    31         7: writeln('Julio');
+   15    35         8: writeln('Agosto');
+   16    39         9: writeln('Setiembre');
+   17    43         10: writeln('Octubre');
+   18    47         11: writeln('Noviembre');
+   19    51         12: writeln('Diciembre');
+   20    55     end;
+   21    80 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 mes          46     variable    integer         0      True    1    5    0
+
+Generated P-code
+
+    0     ldcon.i      0        31          ;5
+    1     wrstr        0         0          ;5
+    2     ldadr        1         5          ;6
+    3     rdinp.i      0         0          ;6
+    4     rdlin        0         0          ;6
+    5     ldval.i      1         5          ;7
+    6     jmpuc        0        55          ;7
+    7     ldcon.i      0         5          ;8
+    8     wrstr        0        31          ;8
+    9     wrlin        0         0          ;8
+   10     jmpuc        0        80          ;8
+   11     ldcon.i      0         7          ;9
+   12     wrstr        0        36          ;9
+   13     wrlin        0         0          ;9
+   14     jmpuc        0        80          ;9
+   15     ldcon.i      0         5          ;10
+   16     wrstr        0        43          ;10
+   17     wrlin        0         0          ;10
+   18     jmpuc        0        80          ;10
+   19     ldcon.i      0         5          ;11
+   20     wrstr        0        48          ;11
+   21     wrlin        0         0          ;11
+   22     jmpuc        0        80          ;11
+   23     ldcon.i      0         4          ;12
+   24     wrstr        0        53          ;12
+   25     wrlin        0         0          ;12
+   26     jmpuc        0        80          ;12
+   27     ldcon.i      0         5          ;13
+   28     wrstr        0        57          ;13
+   29     wrlin        0         0          ;13
+   30     jmpuc        0        80          ;13
+   31     ldcon.i      0         5          ;14
+   32     wrstr        0        62          ;14
+   33     wrlin        0         0          ;14
+   34     jmpuc        0        80          ;14
+   35     ldcon.i      0         6          ;15
+   36     wrstr        0        67          ;15
+   37     wrlin        0         0          ;15
+   38     jmpuc        0        80          ;15
+   39     ldcon.i      0         9          ;16
+   40     wrstr        0        73          ;16
+   41     wrlin        0         0          ;16
+   42     jmpuc        0        80          ;16
+   43     ldcon.i      0         7          ;17
+   44     wrstr        0        82          ;17
+   45     wrlin        0         0          ;17
+   46     jmpuc        0        80          ;17
+   47     ldcon.i      0         9          ;18
+   48     wrstr        0        89          ;18
+   49     wrlin        0         0          ;18
+   50     jmpuc        0        80          ;18
+   51     ldcon.i      0         9          ;19
+   52     wrstr        0        98          ;19
+   53     wrlin        0         0          ;19
+   54     jmpuc        0        80          ;19
+   55     ldcon.i      0         1          ;19
+   56     case1.i      0         7          ;19
+   57     ldcon.i      0         2          ;19
+   58     case1.i      0        11          ;19
+   59     ldcon.i      0         3          ;19
+   60     case1.i      0        15          ;19
+   61     ldcon.i      0         4          ;19
+   62     case1.i      0        19          ;19
+   63     ldcon.i      0         5          ;19
+   64     case1.i      0        23          ;19
+   65     ldcon.i      0         6          ;19
+   66     case1.i      0        27          ;19
+   67     ldcon.i      0         7          ;19
+   68     case1.i      0        31          ;19
+   69     ldcon.i      0         8          ;19
+   70     case1.i      0        35          ;19
+   71     ldcon.i      0         9          ;19
+   72     case1.i      0        39          ;19
+   73     ldcon.i      0        10          ;19
+   74     case1.i      0        43          ;19
+   75     ldcon.i      0        11          ;19
+   76     case1.i      0        47          ;19
+   77     ldcon.i      0        12          ;19
+   78     case1.i      0        51          ;19
+   79     case2        0         0          ;19
+   80     stopx        0         0          ;20

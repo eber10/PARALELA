@@ -1,0 +1,46 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program Readln1;
+    2     0 var
+    3     0  numero, doble:integer;
+    4     0 begin
+    5     0  write('Introduce un numero:');
+    6     2  readln(numero);
+    7     5  doble:=numero*2;
+    8    10  writeln('su doble es ', doble);
+    9    15 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 numero       46     variable    integer         0      True    1    5    0
+ 48 doble        47     variable    integer         0      True    1    6    0
+
+Generated P-code
+
+    0     ldcon.i      0        20          ;5
+    1     wrstr        0         0          ;5
+    2     ldadr        1         5          ;6
+    3     rdinp.i      0         0          ;6
+    4     rdlin        0         0          ;6
+    5     ldadr        1         6          ;6
+    6     ldval.i      1         5          ;7
+    7     ldcon.i      0         2          ;7
+    8     mulop.i      0         0          ;7
+    9     store.i      0         0          ;7
+   10     ldcon.i      0        12          ;8
+   11     wrstr        0        20          ;8
+   12     ldval.i      1         6          ;8
+   13     wrval.i      0         0          ;8
+   14     wrlin        0         0          ;8
+   15     stopx        0         0          ;8

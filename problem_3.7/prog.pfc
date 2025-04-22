@@ -1,0 +1,13 @@
+program tiempAsegundos;
+var
+    horas, minutos, segundos, total: integer;
+begin
+    write('Ingrese horas: ');
+    readln(horas);
+    write('Ingrese minutos: ');
+    readln(minutos);
+    write('Ingrese segundos: ');
+    readln(segundos);
+    total := horas*3600 + minutos*60 + segundos;
+    writeln('El tiempo total en segundos es: ', total);
+end.

@@ -1,0 +1,18 @@
+program ssm;
+
+var
+    grado: char;
+
+begin
+    write('Ingrese el grado: ');
+    readln(grado);
+    
+    case(grado) of
+        'A': writeln('Excelente');
+        'B','C': writeln('Bien hecho');
+        'D': writeln('Pasaste');
+        'F': writeln('Intentalo de nuevo')
+    else
+        writeln('No es un grado válido');
+    end
+end.

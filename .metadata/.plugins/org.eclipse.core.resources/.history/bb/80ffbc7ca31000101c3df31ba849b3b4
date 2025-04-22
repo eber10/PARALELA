@@ -1,0 +1,29 @@
+program Detectar;
+var
+  nombre: array[1..50] of char;  { Un array de caracteres de tamaño 50 }
+  i: integer;
+begin
+  writeln('Ingrese su nombre:');
+  
+  { Leer nombre carácter por carácter }
+  for i := 1 to 50 do
+  begin
+    read(nombre[i]);
+    if nombre[i] = #10 then { Si se presiona Enter, termina la lectura }
+    begin
+      nombre[i] := #0; { Marcar fin de la cadena }
+      break;
+    end;
+  end;
+
+  writeln('Su nombre es: ');
+  
+  { Mostrar nombre carácter por carácter }
+  for i := 1 to 50 do
+  begin
+    if nombre[i] = #0 then break;
+    write(nombre[i]);
+  end;
+  
+  writeln;
+end.

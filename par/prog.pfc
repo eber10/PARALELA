@@ -1,0 +1,9 @@
+program Par;
+var
+	t, num:integer;
+begin
+	write('Introduzca un numero entero:');
+	readln(num);
+	if ((num mod 2=0)) then
+		write('El numero introducido es par');
+end.

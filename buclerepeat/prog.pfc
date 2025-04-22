@@ -1,0 +1,13 @@
+program buclerepeat;
+var
+	claveCorrecta, intento:integer;
+begin
+	claveCorrecta:=123;
+	repeat
+	writeln('Ingrese la clave de acceso: ');
+	readln(intento);
+	until intento=claveCorrecta;
+	writeln('Clave correcta');
+	(*Aqui iria el resto del programa*)
+	readln
+end.

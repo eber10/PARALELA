@@ -1,0 +1,16 @@
+program ssm;
+
+var
+    grado: char;
+
+begin
+    write('Ingrese el grado:(A, B, C, D o F):');
+    readln(grado);
+    
+    case(grado) of
+        'A': writeln('Excelente');
+        'B','C': writeln('Bien hecho');
+        'D': writeln('Pasaste');
+        'F': writeln('Intentalo de nuevo')
+    end;
+end.

@@ -1,0 +1,8 @@
+program problem_3.1;
+var
+    nombre: string;
+begin
+    writeln('Ingrese su nombre: ');
+    readln(nombre);
+    writeln('El nombre ingresado es: ', nombre);
+end.

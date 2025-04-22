@@ -1,0 +1,8 @@
+program detectar;
+var 
+	nombre: string;
+begin
+	writeln('Ingrese su nombre');
+	readln(nombre);
+	writeln('su nombre es:', nombre);
+end.

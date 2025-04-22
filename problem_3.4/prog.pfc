@@ -1,0 +1,13 @@
+program compararcon100;
+var
+    numero: integer;
+begin
+    write('Ingrese un numero: ');
+    readln(numero);
+    if numero > 100 then
+        writeln('Es mayor que 100')
+    else if numero < 100 then
+        writeln('Es menor que 100')
+    else
+        writeln('Es igual a 100');
+end.

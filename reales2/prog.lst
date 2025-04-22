@@ -1,0 +1,51 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program Reales2;
+    2     0 var
+    3     0  centimetros, metros:real;
+    4     0 begin
+    5     0  write('Dime la longitud en centimetros:');
+    6     2  readln(centimetros);
+    7     5  metros:=centimetros/100;
+    8    11  writeln('Equivale a ', metros:5:4, ' metros');
+    9    20 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 centimetro   46     variable    real            0      True    1    5    0
+ 48 metros       47     variable    real            0      True    1    6    0
+
+Generated P-code
+
+    0     ldcon.i      0        32          ;5
+    1     wrstr        0         0          ;5
+    2     ldadr        1         5          ;6
+    3     rdinp.r      0         0          ;6
+    4     rdlin        0         0          ;6
+    5     ldadr        1         6          ;6
+    6     ldval.r      1         5          ;7
+    7     ldcon.i      0       100          ;7
+    8     float        0         0          ;7
+    9     divop.r      0         0          ;7
+   10     store.r      0         0          ;7
+   11     ldcon.i      0        11          ;8
+   12     wrstr        0        32          ;8
+   13     ldval.r      1         6          ;8
+   14     ldcon.i      0         5          ;8
+   15     ldcon.i      0         4          ;8
+   16     w2frm        0         0          ;8
+   17     ldcon.i      0         7          ;8
+   18     wrstr        0        43          ;8
+   19     wrlin        0         0          ;8
+   20     stopx        0         0          ;8

@@ -1,0 +1,71 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program ssm;
+    2     0 
+    3     0 var
+    4     0     grado: char;
+    5     0 
+    6     0 begin
+    7     0     write('Ingrese el grado:(A, B, C, D o F):');
+    8     2     readln(grado);
+    9     5     
+   10     5     case(grado) of
+   11     7         'A': writeln('Excelente');
+   12    11         'B','C': writeln('Bien hecho');
+   13    15         'D': writeln('Pasaste');
+   14    19         'F': writeln('Intentalo de nuevo')
+   15    21     end;
+   16    34 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 grado        46     variable    char            0      True    1    5    0
+
+Generated P-code
+
+    0     ldcon.i      0        34          ;7
+    1     wrstr        0         0          ;7
+    2     ldadr        1         5          ;8
+    3     rdinp.c      0         0          ;8
+    4     rdlin        0         0          ;8
+    5     ldval.c      1         5          ;10
+    6     jmpuc        0        23          ;10
+    7     ldcon.i      0         9          ;11
+    8     wrstr        0        34          ;11
+    9     wrlin        0         0          ;11
+   10     jmpuc        0        34          ;11
+   11     ldcon.i      0        10          ;12
+   12     wrstr        0        43          ;12
+   13     wrlin        0         0          ;12
+   14     jmpuc        0        34          ;12
+   15     ldcon.i      0         7          ;13
+   16     wrstr        0        53          ;13
+   17     wrlin        0         0          ;13
+   18     jmpuc        0        34          ;13
+   19     ldcon.i      0        18          ;14
+   20     wrstr        0        60          ;14
+   21     wrlin        0         0          ;14
+   22     jmpuc        0        34          ;14
+   23     ldcon.c      0        65          ;14
+   24     case1.c      0         7          ;14
+   25     ldcon.c      0        66          ;14
+   26     case1.c      0        11          ;14
+   27     ldcon.c      0        67          ;14
+   28     case1.c      0        11          ;14
+   29     ldcon.c      0        68          ;14
+   30     case1.c      0        15          ;14
+   31     ldcon.c      0        70          ;14
+   32     case1.c      0        19          ;14
+   33     case2        0         0          ;14
+   34     stopx        0         0          ;15

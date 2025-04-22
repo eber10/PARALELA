@@ -1,0 +1,9 @@
+program Reales2;
+var
+	centimetros, metros:real;
+begin
+	write('Dime la longitud en centimetros');
+	readln(centimetros);
+	metros:=centimetros/100;
+	writeln('Equivale a', metros:5:4, 'metros');
+end.

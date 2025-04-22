@@ -1,0 +1,11 @@
+program multiplo;
+var
+    numero: integer;
+begin
+    write('Ingrese un numero: ');
+    readln(numero);
+    if numero mod 5 = 0 then
+        writeln('Es multiplo de 5')
+    else
+        writeln('No es multiplo de 5');
+end.

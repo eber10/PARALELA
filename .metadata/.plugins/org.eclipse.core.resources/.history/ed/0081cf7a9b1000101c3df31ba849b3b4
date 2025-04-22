@@ -1,0 +1,16 @@
+program ssm;
+var
+	grado:char;
+begin
+	write('Ingrese el grado:');
+	readln(grado);
+	case(grado) of
+		'A':writeln('Excelente');
+		'B','C':writeln('Bien hecho');
+		'D':writeln('pasaste');
+		'F':writeln('Intentalo de nuevo');
+	else
+		writeln('No es un grado')
+	end;
+	readln
+end.

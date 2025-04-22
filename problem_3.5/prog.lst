@@ -1,0 +1,87 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program nombredia;
+    2     0 var
+    3     0     dia: integer;
+    4     0 begin
+    5     0     write('Ingrese un numero del 1 al 7: ');
+    6     2     readln(dia);
+    7     5     case dia of
+    8     7         1: writeln('Lunes');
+    9    11         2: writeln('Martes');
+   10    15         3: writeln('Miercoles');
+   11    19         4: writeln('Jueves');
+   12    23         5: writeln('Viernes');
+   13    27         6: writeln('Sabado');
+   14    31         7: writeln('Domingo');
+   15    35     end;
+   16    50 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 dia          46     variable    integer         0      True    1    5    0
+
+Generated P-code
+
+    0     ldcon.i      0        30          ;5
+    1     wrstr        0         0          ;5
+    2     ldadr        1         5          ;6
+    3     rdinp.i      0         0          ;6
+    4     rdlin        0         0          ;6
+    5     ldval.i      1         5          ;7
+    6     jmpuc        0        35          ;7
+    7     ldcon.i      0         5          ;8
+    8     wrstr        0        30          ;8
+    9     wrlin        0         0          ;8
+   10     jmpuc        0        50          ;8
+   11     ldcon.i      0         6          ;9
+   12     wrstr        0        35          ;9
+   13     wrlin        0         0          ;9
+   14     jmpuc        0        50          ;9
+   15     ldcon.i      0         9          ;10
+   16     wrstr        0        41          ;10
+   17     wrlin        0         0          ;10
+   18     jmpuc        0        50          ;10
+   19     ldcon.i      0         6          ;11
+   20     wrstr        0        50          ;11
+   21     wrlin        0         0          ;11
+   22     jmpuc        0        50          ;11
+   23     ldcon.i      0         7          ;12
+   24     wrstr        0        56          ;12
+   25     wrlin        0         0          ;12
+   26     jmpuc        0        50          ;12
+   27     ldcon.i      0         6          ;13
+   28     wrstr        0        63          ;13
+   29     wrlin        0         0          ;13
+   30     jmpuc        0        50          ;13
+   31     ldcon.i      0         7          ;14
+   32     wrstr        0        69          ;14
+   33     wrlin        0         0          ;14
+   34     jmpuc        0        50          ;14
+   35     ldcon.i      0         1          ;14
+   36     case1.i      0         7          ;14
+   37     ldcon.i      0         2          ;14
+   38     case1.i      0        11          ;14
+   39     ldcon.i      0         3          ;14
+   40     case1.i      0        15          ;14
+   41     ldcon.i      0         4          ;14
+   42     case1.i      0        19          ;14
+   43     ldcon.i      0         5          ;14
+   44     case1.i      0        23          ;14
+   45     ldcon.i      0         6          ;14
+   46     case1.i      0        27          ;14
+   47     ldcon.i      0         7          ;14
+   48     case1.i      0        31          ;14
+   49     case2        0         0          ;14
+   50     stopx        0         0          ;15

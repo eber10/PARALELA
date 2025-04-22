@@ -1,0 +1,12 @@
+program ssc;
+var 
+	numero:integer;
+begin
+	writeln('Escriba un numero:');
+	readln(numero);
+	if numero<0 then
+		begin
+			writeln('El numero es negativo');
+			readln
+		end;
+end.

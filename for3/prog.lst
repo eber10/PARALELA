@@ -1,0 +1,59 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program for3;
+    2     0 var
+    3     0  tabla,num:integer;
+    4     0 begin
+    5     0  for tabla:=1 to 5 do
+    6     4  begin
+    7     4   for num:=1 to 10 do
+    8     8    writeln(tabla,' por ',num,' es ',tabla*num);
+    9    22   writeln;(*linea en blanco*)
+   10    23  end;
+   11    24  readln
+   12    24 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 tabla        46     variable    integer         0      True    1    5    0
+ 48 num          47     variable    integer         0      True    1    6    0
+
+Generated P-code
+
+    0     ldadr        1         5          ;4
+    1     ldcon.i      0         1          ;5
+    2     ldcon.i      0         5          ;5
+    3     for1u.i      0        24          ;5
+    4     ldadr        1         6          ;6
+    5     ldcon.i      0         1          ;7
+    6     ldcon.i      0        10          ;7
+    7     for1u.i      0        22          ;7
+    8     ldval.i      1         5          ;8
+    9     wrval.i      0         0          ;8
+   10     ldcon.i      0         5          ;8
+   11     wrstr        0         0          ;8
+   12     ldval.i      1         6          ;8
+   13     wrval.i      0         0          ;8
+   14     ldcon.i      0         4          ;8
+   15     wrstr        0         5          ;8
+   16     ldval.i      1         5          ;8
+   17     ldval.i      1         6          ;8
+   18     mulop.i      0         0          ;8
+   19     wrval.i      0         0          ;8
+   20     wrlin        0         0          ;8
+   21     for2u.i      0         8          ;8
+   22     wrlin        0         0          ;8
+   23     for2u.i      0         4          ;9
+   24     rdlin        0         0          ;10
+   25     stopx        0         0          ;11

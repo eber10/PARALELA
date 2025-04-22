@@ -1,0 +1,8 @@
+program Caracteres;
+var
+	letra1:char;
+begin
+	write('Dime una letra:);
+	readln(letra1);
+	writeln('la letra era', letra1);
+end.

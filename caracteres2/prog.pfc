@@ -1,0 +1,9 @@
+program Caracteres2;
+var
+	letra1, letra2:char;
+begin
+	write('Dime un letra:');
+	readln(letra1);
+	letra2:='z';
+	writeln('Tu letra es: ', letra1, ' y la mia: ', letra2);
+end.

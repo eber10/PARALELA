@@ -1,0 +1,48 @@
+- Pascal-FC for IBM PC compatibles - 
+- GNU Compiler Version P5.2
+
+G L Davies  &  A Burns, University of York
+
+Compiler listing
+
+    1     0 program Positivo;
+    2     0 var
+    3     0  numero:integer;
+    4     0  esPositivo:boolean;
+    5     0 begin
+    6     0  writeln('Escriba un numero:');
+    7     3  readln(numero);
+    8     6  esPositivo:=numero>0;
+    9    11  if esPositivo then writeln('El numero es positivo');
+   10    16 end.
+
+
+
+Symbol table
+
+    name       link      objekt       type         ref      nrm  lev  adr  aux
+
+ 45 _main        44     procedure   notyp           2      True    0    0    0
+ 46 any           0     variable    synch           0      True    1    5    0
+ 47 numero       46     variable    integer         0      True    1    5    0
+ 48 espositivo   47     variable    boolean         0      True    1    6    0
+
+Generated P-code
+
+    0     ldcon.i      0        18          ;6
+    1     wrstr        0         0          ;6
+    2     wrlin        0         0          ;6
+    3     ldadr        1         5          ;7
+    4     rdinp.i      0         0          ;7
+    5     rdlin        0         0          ;7
+    6     ldadr        1         6          ;7
+    7     ldval.i      1         5          ;8
+    8     ldcon.i      0         0          ;8
+    9     relgt.i      0         0          ;8
+   10     store.b      0         0          ;8
+   11     ldval.b      1         6          ;9
+   12     jmpiz        0        16          ;9
+   13     ldcon.i      0        21          ;9
+   14     wrstr        0        18          ;9
+   15     wrlin        0         0          ;9
+   16     stopx        0         0          ;9

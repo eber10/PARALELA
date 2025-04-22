@@ -1,0 +1,9 @@
+program if2b;
+var
+	numero:integer;
+begin
+	writeln('Escriba un numero');
+	readln(numero);
+	if numero < 0 then
+		writeln('El numero es negativo.')
+end.

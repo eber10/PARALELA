@@ -1,0 +1,6 @@
+program Caracteres;
+var
+	letra1, letra2:char;
+begin
+	write('Dime una letra:);
+end.

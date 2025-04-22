@@ -1,0 +1,16 @@
+program buclewhile;
+var
+	numero:integer;
+begin
+	write('Ingrese un numero menor a 10: ');
+	readln(numero);
+	if(numero<10) then
+	begin
+		while(numero<=10) do
+			begin
+				write(numero,' ');
+				numero:=numero + 1;
+			end;
+	end;
+	readln
+end.
