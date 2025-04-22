@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1744301216 source:c:\users\hp\documents\ejercicio5\ejercicio5.cpp
+	<iostream>
+	<thread>
+	<chrono>
+
