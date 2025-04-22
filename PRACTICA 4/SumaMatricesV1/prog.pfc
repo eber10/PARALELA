@@ -1,0 +1,39 @@
+program SumaMatricesV1;
+var matA,matB,matC,matSuma: array[1..4, 1..4] of integer;
+    limSupFila, limInfFila, limSupCol, limInfCol: integer;
+
+(*Tipo proceso*)
+process type ProcesoSumaMatrices(limInfFila,limSupFila,limInfCol,limSupCol: integer);
+var i,j:integer;
+begin
+    for i:= limInfFila to limSupFila do
+        for j:= limInfCol to limSupCol do
+        begin
+            matSuma[i,j] := matA[i,j] + matB[i,j] + matC[i,j];
+        end;
+end;
+
+var p1,p2,p3,p4: ProcesoSumaMatrices;
+    i,j: integer;
+
+begin
+    for i:=1 to 4 do
+    for j:=1 to 4 do
+        begin
+            matA[i,j] := 1;
+            matB[i,j] := 2;
+            matC[i,j] := 3;
+            matSuma[i,j] := 0;
+        end;
+    	cobegin
+       	 	p1(1,1,1,4);
+        	p2(2,2,1,4);
+        	p3(3,3,1,4);
+        	p4(4,4,1,4);
+    	coend;
+    for i:=1 to 4 do
+    for j:=1 to 4 do
+        begin
+            writeln('Elemento ',i,',' ,j,' de la matriz Suma: ', matSuma[i,j]);
+        end;
+end.
